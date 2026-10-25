@@ -593,11 +593,17 @@ Pada pengujian ESP32 dengan 100 pengulangan, median inference meningkat dari 5.1
 
 | Variasi | K | Scaling | Accuracy (%) | Median inference (µs) | Catatan |
 |---|---:|---|---:|---:|---|
-| A | 1 | Ya | | | |
-| B | 3 | Ya | | | |
-| C | 5 | Ya | | | |
-| D | 7 | Ya | | | |
-| E | 3 | Tidak | | | |
+| A | 1 | Ya | 83,33 | Belum diukur | 10 dari 12 data test benar |
+| B | 3 | Ya | 75,00 | 5.113* | 9 dari 12 data test benar |
+| C | 5 | Ya | 83,33 | Belum diukur | 10 dari 12 data test benar |
+| D | 7 | Ya | 75,00 | Belum diukur | 9 dari 12 data test benar |
+| E | 3 | Tidak | 83,33 | Belum diukur | 10 dari 12 data test benar |
+
+**Catatan:**
+- Accuracy diperoleh dari evaluasi menggunakan 12 data test.
+- *Median inference 5.113 µs merupakan hasil benchmark ESP32 pada dataset 36 sampel dengan K=3 dan scaling aktif. Nilai tersebut bukan pengukuran terpisah untuk seluruh variasi.
+- Pengukuran median inference untuk variasi lainnya belum dilakukan.
+
 
 ## 13. Pertanyaan analisis
 
